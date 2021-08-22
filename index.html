@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N I T S</title>
+    <link href="./css/tailwind.css" rel="stylesheet" />
+    <!-- <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+    <link href="/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+  </head>
+  <body class="bg-gray-100 relative">
+    <section>
+      <div
+        class="bg-no-repeat bg-cover h-screen"
+        style="
+          background-image: linear-gradient(
+              rgba(215, 26, 33, 0.3),
+              rgba(172, 119, 119, 0.6)
+            ),
+            url(img/ek-airport.jpg);
+          /* filter: blur(6px); */
+        "
+      >
+        <div class="text-center">
+          <h1
+            class="
+              text-9xl
+              font-bold
+              text-center text-red-500
+              mx-auto
+              uppercase
+              italic
+              tracking-widest
+            "
+          >
+            nits
+          </h1>
+          <h4
+            class="
+              text-center text-gray-50 text-2xl
+              tracking-widest
+              uppercase
+              font-semibold
+              italic
+              mt-3
+            "
+          >
+            briefing tool
+          </h4>
+          <button
+            class="
+              btn-start
+              uppercase
+              mt-16
+              text-xl text-white
+              font-bold
+              rounded-lg
+              px-4
+              py-2
+              bg-red-400
+              hover:bg-red-300 hover:text-red-900
+              active:bg-red-400
+              focus:outline-none focus:border-red-900 focus:ring-1 focus:
+              ring-red-900
+            "
+          >
+            Get started
+          </button>
+        </div>
+      </div>
+      <div
+        class="
+          hidden
+          popup-window
+          bg-gray-200
+          w-2/3
+          h-4/5
+          mx-auto
+          absolute
+          top-16
+          left-2/4
+          transition
+          -translate-x-1/2
+          transform
+          rounded-2xl
+          px-12
+          py-12
+        "
+        style="filter: none"
+      >
+        <form
+          action=""
+          class="
+            form-container
+            w-full
+            h-full
+            relative
+            overflow-hidden
+            rounded-lg
+          "
+        >
+          <div
+            class="
+              slide
+              p-4
+              bg-green-400
+              w-full
+              h-full
+              grid grid-cols-2
+              absolute
+              left-0
+              top-0
+              transition
+              duration-500
+            "
+          >
+            <h2 class="absolute left-2/4 top-1 -translate-x-1/2 transform">
+              1. Nature of Emergency
+            </h2>
+            <div class="col-nature-1 p-4 h-4/6 mt-6">
+              <h3>Categories</h3>
+              <div>
+                <input
+                  type="radio"
+                  id="mechanical"
+                  name="category"
+                  value="mechanical"
+                />
+                <label for="male">Mechanical</label><br />
+                <input
+                  type="radio"
+                  id="medical"
+                  name="category"
+                  value="medical"
+                />
+                <label for="medical">Medical</label><br />
+                <input type="radio" id="other" name="category" value="other" />
+                <label for="other">Other</label>
+              </div>
+            </div>
+
+            <div class="col-nature-2 p-4 h-4/6 mt-6">
+              <label for="nature">Please specify:</label><br />
+              <textarea
+                class="p-1 w-full rounded-lg mt-2"
+                name="nature"
+                rows="8"
+                cols="50"
+                placeholder="Nature of Emergency..."
+              ></textarea>
+            </div>
+          </div>
+          <div
+            class="
+              slide
+              p-4
+              bg-green-400
+              w-full
+              h-full
+              grid grid-cols-2
+              absolute
+              left-0
+              top-0
+              transition
+              duration-500
+            "
+          >
+            <h2 class="absolute left-2/4 top-1 -translate-x-1/2 transform">
+              2. Intentions of the Captain
+            </h2>
+            <div class="col-nature-1 p-4 h-4/6 mt-6">
+              <h3>Categories</h3>
+              <div>
+                <input
+                  type="radio"
+                  id="mechanical"
+                  name="category"
+                  value="mechanical"
+                />
+                <label for="male">Emergency Landing</label><br />
+                <input
+                  type="radio"
+                  id="medical"
+                  name="category"
+                  value="medical"
+                />
+                <label for="medical">Ditching</label><br />
+                <input type="radio" id="other" name="category" value="other" />
+                <label for="other">Diversion</label>
+              </div>
+            </div>
+
+            <div class="col-nature-2 p-4 h-4/6 mt-6">
+              <label for="nature">Additional Information</label><br />
+              <textarea
+                class="p-1 w-full rounded-lg mt-2"
+                name="nature"
+                rows="8"
+                cols="50"
+                placeholder="Intentions of the Captain..."
+              ></textarea>
+            </div>
+          </div>
+          <div
+            class="
+              slide
+              p-4
+              bg-green-400
+              w-full
+              h-full
+              grid grid-cols-2
+              absolute
+              left-0
+              top-0
+              transition
+              duration-500
+            "
+          >
+            <h2 class="absolute left-2/4 top-1 -translate-x-1/2 transform">
+              3. Time Available
+            </h2>
+            <div class="col-nature-1 p-4 h-4/6">
+              <h3 class="pt-8">Please Specify time</h3>
+              <label for="time">in minutes:</label>
+              <br />
+              <input
+                class="time-available mt-5 text-2xl rounded-lg"
+                type="text"
+                name="time"
+                id=""
+              />
+              <button class="time-btn w-24 h-10 mt-5 bg-blue-900 rounded-lg">
+                Start Timer
+                <i class="fas fa-chevron-right text-white"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="
+              slide
+              p-4
+              bg-green-400
+              w-full
+              h-full
+              grid grid-cols-2
+              absolute
+              left-0
+              top-0
+              transition
+              duration-500
+            "
+          >
+            <h2 class="absolute left-2/4 top-1 -translate-x-1/2 transform">
+              4. Specific Instructions
+            </h2>
+            <div class="col-nature-1 p-4 h-4/6 mt-6">
+              <label for="nature">Please specify additional details:</label
+              ><br />
+              <textarea
+                class="p-1 w-full rounded-lg mt-2"
+                name="nature"
+                rows="8"
+                cols="50"
+                placeholder="Specific Instructions..."
+              ></textarea>
+            </div>
+
+            <div class="col-nature-2 p-4 h-4/6"></div>
+          </div>
+        </form>
+        <button
+          class="
+            btn-left
+            w-10
+            h-20
+            bg-blue-900
+            absolute
+            left-1
+            top-2/4
+            -translate-y-2/4
+            transform
+          "
+        >
+          <i class="fas fa-chevron-left text-white"></i>
+        </button>
+        <button
+          class="
+            btn-right
+            w-10
+            h-20
+            bg-blue-900
+            absolute
+            right-1
+            top-2/4
+            -translate-y-2/4
+            transform
+          "
+        >
+          <i class="fas fa-chevron-right text-white"></i>
+        </button>
+        <button
+          class="
+            btn-close
+            w-10
+            h-5
+            bg-gray-200
+            absolute
+            right-1
+            top-1
+            transform
+          "
+        >
+          <i
+            class="fas fa-window-close w-full h-full text-blue-900 text-3xl"
+          ></i>
+        </button>
+        <button
+          class="
+            btn-right
+            w-32
+            h-10
+            bg-blue-900
+            absolute
+            left-2/4
+            bottom-1
+            -translate-x-2/4
+            transform
+            rounded-lg
+          "
+        >
+          Sumbit
+          <i class="fas fa-chevron-right text-white"></i>
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
